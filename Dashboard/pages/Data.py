@@ -3,6 +3,10 @@ import streamlit as st
 from numpy.random import default_rng as rng
 
 
+st.set_page_config(               
+    layout="wide"                
+)
+
 # Sidebar configuration
 st.sidebar.image("./assets/SU_large.png")
 
@@ -10,7 +14,7 @@ st.sidebar.image("./assets/SU_large.png")
 st.write("# Data Demo")
 
 # Create a random dataframe
-st.markdown("### Example1: Dataframe")
+st.markdown("### Example1: Random Dataframe")
 df = pd.DataFrame(
     rng(0).standard_normal((10, 20)), columns=("col %d" % i for i in range(20))
 )
@@ -26,16 +30,23 @@ st.dataframe(df.style.highlight_max(axis=0))
 
 
 ### 
-st.markdown("### Example2: Titanic CSV Viewer")
+# st.markdown("### Example2: Titanic CSV Viewer")
+
+# DATA_URL = "https://storage.googleapis.com/tf-datasets/titanic/train.csv"
+
+# @st.cache_data
+# def load_data(url: str) -> pd.DataFrame:
+#     return pd.read_csv(url)
+
+# st.caption(DATA_URL)
+
+# df = load_data(DATA_URL)
+# st.write(f"Total: **{df.shape[0]}** rows × **{df.shape[1]}** columns")
+# st.dataframe(df, use_container_width=True)
+
+
+
 
 DATA_URL = "https://storage.googleapis.com/tf-datasets/titanic/train.csv"
-
-@st.cache_data
-def load_data(url: str) -> pd.DataFrame:
-    return pd.read_csv(url)
-
-st.caption(DATA_URL)
-
 df = load_data(DATA_URL)
-st.write(f"Total: **{df.shape[0]}** rows × **{df.shape[1]}** columns")
 st.dataframe(df, use_container_width=True)
