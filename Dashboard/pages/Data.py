@@ -2,7 +2,6 @@ import pandas as pd
 import streamlit as st
 from numpy.random import default_rng as rng
 
-pip install pandas-profiling streamlit-pandas-profiling
 import pandas_profiling
 from streamlit_pandas_profiling import st_profile_report
 
