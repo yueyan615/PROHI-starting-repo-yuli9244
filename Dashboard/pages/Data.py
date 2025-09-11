@@ -8,7 +8,8 @@ st.set_page_config(
 )
 
 # Sidebar configuration
-st.sidebar.image("./assets/SU_large.png")
+img1 = "./assets/SU_small.png"
+st.logo(img1, size= "large", icon_image=None)  
 
 # Page information
 st.write("# Data Demo")
@@ -29,24 +30,17 @@ st.dataframe(df.style.highlight_max(axis=0))
 # st_profile_report(pr)
 
 
-### 
-# st.markdown("### Example2: Titanic CSV Viewer")
-
-# DATA_URL = "https://storage.googleapis.com/tf-datasets/titanic/train.csv"
-
-# @st.cache_data
-# def load_data(url: str) -> pd.DataFrame:
-#     return pd.read_csv(url)
-
-# st.caption(DATA_URL)
-
-# df = load_data(DATA_URL)
-# st.write(f"Total: **{df.shape[0]}** rows × **{df.shape[1]}** columns")
-# st.dataframe(df, use_container_width=True)
-
-
-
+### Create a CSV viewer
+st.markdown("### Example2: Titanic CSV Viewer")
 
 DATA_URL = "https://storage.googleapis.com/tf-datasets/titanic/train.csv"
-df = load_data(DATA_URL)
+df = pd.read_csv(DATA_URL)
+
+# display the url
+st.caption(DATA_URL) 
+
+# display the dataframe
 st.dataframe(df, use_container_width=True)
+
+# display the shape of dataframe
+st.write(f"Total: **{df.shape[0]}** rows × **{df.shape[1]}** columns")

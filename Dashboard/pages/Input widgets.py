@@ -1,7 +1,8 @@
 import streamlit as st
 
 # Sidebar configuration
-st.sidebar.image("./assets/SU_large.png")
+img1 = "./assets/SU_small.png"
+st.logo(img1, size= "large", icon_image=None)  
 
 # # Page information
 st.write("# Input Widgets Demo")
