@@ -1,5 +1,7 @@
 import streamlit as st
 
+st.set_page_config(page_title="Individual 2 yueyan li", layout="wide")
+
 # Sidebar configuration
 img1 = "./assets/SU_small.png"
 st.logo(img1, size= "large", icon_image=None)  
