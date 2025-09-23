@@ -3,17 +3,18 @@
 **Author**: Yueyan Li
 <!-- As main author, do not write anything in the line below.
 The collaborator will edit the line below in GitHub -->
-**Collaborator**: Anna Larsen
+
 
 _Note that this file is written in **MarkDown** language. A reference is available here: <https://www.markdownguide.org/basic-syntax/>_
 
-_Here you can include images, like the logo from SU_
+_Here are the images: two logos from SU_
 
-![Your dashboard](./assets/project-logo.jpg)
+![SU logo1](./assets/SU_large.png)
+![SU logo2](./assets/SU_small.png)
 
 ## Introduction
+Includes four Streamlit pages: About, Input Widgets, Chart, and Data.
 
-_This template project will contain a simple interactive web dashboard with Streamlit. Feel free to edit this document as desired_
 
 ## System description
 
@@ -38,10 +39,14 @@ If you are using Mac, you may need to install Xcode. Check the official Streamli
 First, make sure that you are running Python from the environment. Check the steps 2 and 3 above. Then, to run the custom dashboard execute the following command:
 
 ```
-> streamlit run Dashboard.py
+> streamlit run About.py
 # If the command above fails, use:
-> python -m streamlit run Dashboard.py
-```
+> 1. python -m streamlit run Dashboard.py
+  2. Activate the virtual environment for Python
+    - [Linux/Mac] `source env/bin/activate` 
+    - [Windows command prompt] `.\env\Scripts\activate.bat` 
+    - [in Windows PowerShell] `.\env\Scripts\Activate.ps1`
+  3. Make sure that your terminal is in the environment (`env`) not in the global Python installation. The terminal should start with the word `env`
 
 ### Dependencies
 
