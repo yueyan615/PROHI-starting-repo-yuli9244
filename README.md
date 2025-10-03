@@ -60,3 +60,7 @@ Tested on Python 3.12.7 with the following packages:
   - Plotly v6.2.0
   - Scikit-Learn v1.7.0
   - shap v0.48.0
+
+## Contributors
+
+_Yueyan Li | yueyan.li@stud.ki.se._
