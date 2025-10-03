@@ -4,13 +4,13 @@
 
 ## Images
 
-**logos**
+### logos
 
 ![SU logo1](./assets/SU_large.png)
 ![SU logo2](./assets/SU_small.png)
 
 
-**Screenshots**
+### Screenshots
 
 Overall views will be like these:
 ![About page](./assets/About.png)
